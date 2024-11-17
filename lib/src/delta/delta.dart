@@ -348,6 +348,9 @@ class Delta {
     final thisIter = DeltaIterator(this);
     final otherIter = DeltaIterator(other);
 
+    bool isEqual(Object? a, Object? b) =>
+        const DeepCollectionEquality.unordered().equals(a, b);
+
     for (final component in diffResult) {
       var length = component.text.length;
       while (length > 0) {
@@ -369,7 +372,7 @@ class Delta {
             );
             final thisOp = thisIter.next(opLength);
             final otherOp = otherIter.next(opLength);
-            if (thisOp.data == otherOp.data) {
+            if (isEqual(thisOp.data, otherOp.data)) {
               retDelta.retain(
                 opLength,
                 diffAttributes(thisOp.attributes, otherOp.attributes),

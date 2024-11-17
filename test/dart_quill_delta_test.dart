@@ -1250,6 +1250,13 @@ void main() {
         expect(a.diff(b), expected);
       });
 
+      test('embed object match #2', () {
+        final a = Delta()..insert({'image': 'http://google.com'})..insert('\n');
+        final b = Delta()..insert({'image': 'http://google.com'});
+        final expected = Delta()..retain(1)..delete(1);
+        expect(a.diff(b), expected);
+      });
+
       test('embed object mismatch', () {
         final a = Delta()
           ..insert({
