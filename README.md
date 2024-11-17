@@ -8,10 +8,6 @@ This package provides a Dart implementation of the [Quill Delta](https://www.npm
 
 Previously, this package was part of the [flutter_quill](https://pub.dev/packages/flutter_quill) package, but it has since been separated into its own package. It maintains the same versioning as `flutter_quill`. The [Flutter Quill](http://github.com/singerdmx/flutter-quill) project forked this package from [quill_delta](https://pub.dev/packages/quill_delta).
 
-## ⚠️ Future Plans
-
-While this package is currently stable and does not have any significant issues, there have been discussions about introducing a **breaking change** release. This would enhance type safety and enforce the use of standard Quill Delta attributes, unless custom attributes are explicitly included. Currently, we have no plans to implement this change, but if introduced, it may be released as a separate package.
-
 ## 🛠️ Supported Projects
 
 The following projects support or use this package:
@@ -31,5 +27,5 @@ For detailed usage and API references, refer to the official [Quill Delta docume
 
 ## 📜 Acknowledgments
 
-* The original package [quill_delta](https://pub.dev/packages/quill_delta)
-* [Delta Delta](https://github.com/slab/delta)
+* The original package [quill_delta](https://pub.dev/packages/quill_delta).
+* [Delta Delta](https://github.com/slab/delta).
